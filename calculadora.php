@@ -5,29 +5,23 @@
     $numero2 = readline("ingrese su segundo numero: ");
     $operacion = readline("ingrese la operacion [ +, -, /, * ] ");
 
-    if($operacion == "+")
+    switch($operacion)
     {
-        print suma($numero1, $numero2);
+        case "+":   
+            print suma($numero1, $numero2);
+            break;
 
-    }
-    elseif($operacion == "-")
-    {
-        print resta($numero1, $numero2);
+        case "-":
+            print resta($numero1, $numero2);
+            break;
 
-    }
-    elseif($operacion == "/")
-    {
-        print divicion($numero1, $numero2);
-
-    }
-    elseif($operacion == "*")
-    {
-        print multiplicacion($numero1, $numero2);
-
-    }
-    else
-    {
-        print "operacion incorrecta $operacion";
-    
+        case "/":
+            print divicion($numero1, $numero2);
+            break;
+        case "*":
+            print multiplicacion($numero1, $numero2);
+            break;
+        default:
+            print "no existe la operacion $operacion";
     }
 
